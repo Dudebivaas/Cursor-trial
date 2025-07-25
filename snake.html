@@ -3,9 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snake-Game</title>
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="snake.css">
 </head>
 <body>
-    
+    <div class="game-container">
+        <h1>🐍 Snake Game</h1>
+        
+        <div class="game-info">
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="level">Level: <span id="level">1</span></div>
+            <div class="high-score">High Score: <span id="highScore">0</span></div>
+        </div>
+
+        <canvas id="gameCanvas" width="600" height="600"></canvas>
+
+        <div class="controls">
+            <p>🎮 Use ARROW KEYS or WASD to move</p>
+            <p>⏸️ Press SPACE to pause</p>
+            <p>🎯 Eat the food to grow and score points!</p>
+        </div>
+    </div>
+
+    <div class="game-over" id="gameOver">
+        <h2>Game Over!</h2>
+        <p>Your Score: <span id="finalScore">0</span></p>
+        <p id="newHighScore" style="color: #4ecdc4; font-weight: bold; display: none;">🎉 New High Score!</p>
+        <button onclick="restartGame()">Play Again</button>
+    </div>
+
+    <div class="pause-overlay" id="pauseOverlay">
+        <p>⏸️ Game Paused</p>
+        <p style="font-size: 0.8em; margin-top: 10px;">Press SPACE to continue</p>
+    </div>
+
+    <script src="snake.js"></script>
 </body>
 </html>
